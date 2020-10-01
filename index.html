@@ -1,0 +1,1234 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- THEME CREATED BY https://webdesignvista.com/ -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="https://webdesignvista.com/">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+            <link rel="stylesheet" href="assets/color-themes/bootstrap.lab.min.css" >
+        <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <!-- Home page header dynamic assets -->
+<link rel="stylesheet" href="assets/plugins/swiper/css/swiper.min.css">
+
+<style>
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+    .t-img-block {
+        width: 100%;
+        max-width: 90px;
+        height: 100%;
+        max-height: 90px;
+        margin: 0 auto;
+        overflow: hidden;
+        border: 3px solid #eeeeee;
+    }
+
+    .t-text {
+        width: 100%;
+        max-width: 600px;
+    }
+</style>
+
+<style>
+
+
+    .overlay {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background:rgba(0,0,0,0.4);
+        z-index: 1;
+    }
+
+    .carousel-item-inner {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        margin-top: 30vh;
+        margin-bottom: 25vh;
+        padding: 2rem;
+        color: white;
+        z-index: 2;
+        background:rgba(68, 108, 179, .7);
+    }
+
+    /* Slider */
+    .slick-slide {
+        margin: 0px 20px;
+    }
+
+    .slick-slide img {
+        width: 100%;
+    }
+
+    .slick-slider
+    {
+        position: relative;
+
+        display: block;
+        box-sizing: border-box;
+
+        -webkit-user-select: none;
+        -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
+
+        -webkit-touch-callout: none;
+        -khtml-user-select: none;
+        -ms-touch-action: pan-y;
+            touch-action: pan-y;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .slick-list
+    {
+        position: relative;
+
+        display: block;
+        overflow: hidden;
+
+        margin: 0;
+        padding: 0;
+    }
+    .slick-list:focus
+    {
+        outline: none;
+    }
+    .slick-list.dragging
+    {
+        cursor: pointer;
+        cursor: hand;
+    }
+
+    .slick-slider .slick-track,
+    .slick-slider .slick-list
+    {
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+            -ms-transform: translate3d(0, 0, 0);
+            -o-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+    }
+
+    .slick-track
+    {
+        position: relative;
+        top: 0;
+        left: 0;
+
+        display: block;
+    }
+    .slick-track:before,
+    .slick-track:after
+    {
+        display: table;
+
+        content: '';
+    }
+    .slick-track:after
+    {
+        clear: both;
+    }
+    .slick-loading .slick-track
+    {
+        visibility: hidden;
+    }
+
+    .slick-slide
+    {
+        display: none;
+        float: left;
+
+        height: 100%;
+        min-height: 1px;
+    }
+    [dir='rtl'] .slick-slide
+    {
+        float: right;
+    }
+    .slick-slide img
+    {
+        display: block;
+    }
+    .slick-slide.slick-loading img
+    {
+        display: none;
+    }
+    .slick-slide.dragging img
+    {
+        pointer-events: none;
+    }
+    .slick-initialized .slick-slide
+    {
+        display: block;
+    }
+    .slick-loading .slick-slide
+    {
+        visibility: hidden;
+    }
+    .slick-vertical .slick-slide
+    {
+        display: block;
+
+        height: auto;
+
+        border: 1px solid transparent;
+    }
+    .slick-arrow.slick-hidden {
+        display: none;
+    }
+
+
+</style>
+
+<style>
+
+    .primary-nav {
+        transition: all 0.4s ease-in-out;
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+    }
+
+
+    .shrink .navbar-brand {
+        height: 0 !important;
+        line-height: 0 !important;
+    }
+
+    .shrink {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        min-height: 55px !important;
+        background: rgba(0,0,0,0.99) !important;
+    }
+
+    .shrink a {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;       
+    }
+
+</style>
+
+<!-- End Home page header dynamic assets -->            <style>
+
+            .navbar {
+            min-height: 80px;
+            }
+
+            .navbar-brand {
+            padding: 0 15px;
+            height: 80px;
+            line-height: 80px;
+            }
+
+            .navbar-toggle {
+            /* (80px - button height 34px) / 2 = 23px */
+            margin-top: 23px;
+            padding: 9px 10px !important;
+            }
+
+            @media (min-width: 768px) {
+                .navbar-nav > li > a {
+                    /* (80px - line-height of 27px) / 2 = 26.5px */
+                    padding-top: 26.5px;
+                    padding-bottom: 26.5px;
+                    line-height: 27px;
+                }
+            }
+
+        </style>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="assets/plugins/font-awesome/css/all.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark primary-nav border-0">
+    <div class="container">    
+        <a class="navbar-brand brand-text fa-32" href="#">Betis</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#whyus">Why Us</a>
+                </li> 
+                <li class="nav-item">
+                    <a class="nav-link" href="#portfolio">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#pricing">Pricing</a>
+                </li>              
+                <li class="nav-item">
+                    <a class="nav-link" href="#testimonials">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#clients">Clients</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#team">Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                        
+        
+            </ul>
+        
+        </div>
+    </div> 
+</nav>
+<!-- INTRO -->
+<div class="w-100 h-100 overflow-hidden" >
+<!-- Swiper -->
+	<div class="hero-swiper-container text-center" >
+		<div class="swiper-wrapper">
+							<div class="swiper-slide active overflow-hidden"  
+					style=" background: url('assets/images/cropped/15674142942378.jpg'); background-size: cover;">
+					<div class="carousel-item-inner position-relative">
+						<h1 class="text-light font-weight-bold fa-48 py-4">
+							Welcome to Betis
+													</h1>
+						<button class="btn btn-primary btn-lg">More Info.</button>
+						<button class="btn btn-primary btn-lg bg-transparent">Get a quote!</button>
+					</div>	
+				</div>
+										<div class="swiper-slide  overflow-hidden"  
+					style=" background: url('assets/images/cropped/15674142626221.jpg'); background-size: cover;">
+					<div class="carousel-item-inner position-relative">
+						<h1 class="text-light font-weight-bold fa-48 py-4">
+							Welcome to Betis
+													</h1>
+						<button class="btn btn-primary btn-lg">More Info.</button>
+						<button class="btn btn-primary btn-lg bg-transparent">Get a quote!</button>
+					</div>	
+				</div>
+										<div class="swiper-slide  overflow-hidden"  
+					style=" background: url('assets/images/cropped/15674141473152.jpg'); background-size: cover;">
+					<div class="carousel-item-inner position-relative">
+						<h1 class="text-light font-weight-bold fa-48 py-4">
+							Welcome to Betis
+													</h1>
+						<button class="btn btn-primary btn-lg">More Info.</button>
+						<button class="btn btn-primary btn-lg bg-transparent">Get a quote!</button>
+					</div>	
+				</div>
+								</div>
+		<!-- Add Pagination -->
+		<div class="hero-swiper-pagination"></div>
+	</div>
+</div>
+<!-- SERVICES -->
+
+<div class='container bg-sec pt-5' id="services">
+	<div class='text-center'>
+		<h2>OUR SERVICES</h2>
+		<span class='d-block text-muted fs-18'>We provide a wide range of services for all types of businesses</span>
+	</div>
+	<div class='row pt-5'>
+				<div class='col-12 col-md-3'>
+			<div class="service-item bg-light bshadow p-4">
+				<img src="assets/images/cropped/15674142894920.jpg" class="w-100">
+				<span class='d-block font-weight-bold py-3'>
+					Improve ROI				</span>
+				<span class='d-block'>
+					Dignissimos et reiciendis dolores dolorem sunt culpa voluptas quae id nostrum nesciunt iste aut eius				</span>
+				<span class='d-block py-3'>
+					<button class="btn btn-primary btn-sm text-light">
+						More Info.
+					</button>
+				</span>
+			</div>
+		</div>
+				<div class='col-12 col-md-3'>
+			<div class="service-item bg-light bshadow p-4">
+				<img src="assets/images/cropped/15674143196890.jpg" class="w-100">
+				<span class='d-block font-weight-bold py-3'>
+					Product Certification				</span>
+				<span class='d-block'>
+					Et id necessitatibus quas aut officia voluptatum soluta nostrum qui rem modi ut				</span>
+				<span class='d-block py-3'>
+					<button class="btn btn-primary btn-sm text-light">
+						More Info.
+					</button>
+				</span>
+			</div>
+		</div>
+				<div class='col-12 col-md-3'>
+			<div class="service-item bg-light bshadow p-4">
+				<img src="assets/images/cropped/15674142927812.jpg" class="w-100">
+				<span class='d-block font-weight-bold py-3'>
+					Branding Solutions				</span>
+				<span class='d-block'>
+					Rerum quae autem et totam molestiae saepe eum perferendis sint facilis voluptate				</span>
+				<span class='d-block py-3'>
+					<button class="btn btn-primary btn-sm text-light">
+						More Info.
+					</button>
+				</span>
+			</div>
+		</div>
+				<div class='col-12 col-md-3'>
+			<div class="service-item bg-light bshadow p-4">
+				<img src="assets/images/cropped/15674142717394.jpg" class="w-100">
+				<span class='d-block font-weight-bold py-3'>
+					Strategy Development				</span>
+				<span class='d-block'>
+					Quasi iusto officiis et id placeat dicta qui non aut aspernatur voluptatem voluptatum voluptatem ullam				</span>
+				<span class='d-block py-3'>
+					<button class="btn btn-primary btn-sm text-light">
+						More Info.
+					</button>
+				</span>
+			</div>
+		</div>
+			</div>
+</div>
+<!-- CALL TO ACTION --> 
+<section class="bg-sec" id="whyus">
+    <div class='container'>
+        <div class='row'>
+            <div class='col-12 col-md-6'>
+                <h2 class="font-weight-bold">
+                    Why Choose Us
+                                    </h2>
+                <div class="accordion" id="accordionExample">
+
+                        <div class="card border-0">
+                            <div class="card-header border-0 bg-white" id="headingOne">
+                                <h2 class="mb-0">
+                                    <button 
+                                        type="button" 
+                                        class="btn btn-link fs-22 text-decoration-none text-muted" 
+                                        data-toggle="collapse" 
+                                        data-target="#collapse1"
+                                    >
+                                        <i class="fa fa-plus"></i> Professionalism                                    
+                                    </button>									
+                                </h2>
+                            </div>
+                            <div id="collapse1" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <p>
+                                        Quo aut hic porro possimus commodi asperiores soluta est repudiandae eligendi voluptas quis corporis quis quos suscipit esse ut magnam dicta voluptates nesciunt architecto amet                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="card border-0">
+                            <div class="card-header border-0 bg-white" id="headingOne">
+                                <h2 class="mb-0">
+                                    <button 
+                                        type="button" 
+                                        class="btn btn-link fs-22 text-decoration-none text-muted" 
+                                        data-toggle="collapse" 
+                                        data-target="#collapse2"
+                                    >
+                                        <i class="fa fa-plus"></i> Hands on approach                                    </button>									
+                                </h2>
+                            </div>
+                            <div id="collapse2" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <p>
+                                        Esse eligendi vitae deleniti corrupti ipsum sit dolorem nobis odio eos et facilis eos et deleniti temporibus porro vel soluta esse voluptatum perspiciatis ut aut earum odit doloremque atque enim fuga ut voluptate aliquam                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="card border-0">
+                            <div class="card-header border-0 bg-white" id="headingOne">
+                                <h2 class="mb-0">
+                                    <button 
+                                        type="button" 
+                                        class="btn btn-link fs-22 text-decoration-none text-muted" 
+                                        data-toggle="collapse" 
+                                        data-target="#collapse3"
+                                    >
+                                        <i class="fa fa-plus"></i> Quick Response                                    </button>									
+                                </h2>
+                            </div>
+                            <div id="collapse3" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <p>
+                                        Tempore est nihil nihil excepturi consequatur iure ducimus nihil suscipit excepturi nobis sed cupiditate repellendus in itaque ut ut aut aut qui ut dolorem deserunt alias sint architecto architecto autem adipisci enim aut harum provident                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                                      
+                   
+                </div>     
+            </div>
+            <div class='col-12 col-md-6'>
+                <img class="img-fluid border cshadow" src="assets/images/cropped/15674141268789.jpg" alt="">
+            </div>
+        </div>
+
+        
+        <div class="container text-center ">
+           
+            <div class='row pt-5' id='r-counterup'>
+                                        <div class="col-lg-3">
+                            <div class="single-counterup">
+                             <span class="counter circle count-num text-info fa-32">9975</span>
+                                <h4 class="title text-muted p-3 r-counter-fact pb-2 border-bottom border-primary">MEMBERS</h4>
+                            </div>
+                        </div>
+                                        <div class="col-lg-3">
+                            <div class="single-counterup">
+                             <span class="counter circle count-num text-info fa-32">12599</span>
+                                <h4 class="title text-muted p-3 r-counter-fact pb-2 border-bottom border-primary">DOWNLOADS</h4>
+                            </div>
+                        </div>
+                                        <div class="col-lg-3">
+                            <div class="single-counterup">
+                             <span class="counter circle count-num text-info fa-32">590</span>
+                                <h4 class="title text-muted p-3 r-counter-fact pb-2 border-bottom border-primary">PROJECTS</h4>
+                            </div>
+                        </div>
+                                        <div class="col-lg-3">
+                            <div class="single-counterup">
+                             <span class="counter circle count-num text-info fa-32">1266</span>
+                                <h4 class="title text-muted p-3 r-counter-fact pb-2 border-bottom border-primary">CLIENTS</h4>
+                            </div>
+                        </div>
+                			
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<!-- PORTFOLIO -->
+<section class="py-5" id="portfolio">
+<div class='container overflow-hidden text-center pb-5'>
+	<div class='text-center'>
+		<h2>OUR AWESOME WORK</h2>
+		<span class='d-block text-muted fs-18'>A selection of our top quality works</span>
+	</div>
+	<div class="portfolio-swiper-container pt-5">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide border p-2 bg-light cshadow">
+				<img src='assets/images/screenshots/aavas.png' class="w-100">
+			</div>
+			<div class="swiper-slide border p-2 bg-light cshadow">
+				<img src='assets/images/screenshots/aegis.png' class="w-100">
+			</div>
+			<div class="swiper-slide border p-2 bg-light cshadow">
+				<img src='assets/images/screenshots/agency99.png' class="w-100">
+			</div>
+			<div class="swiper-slide border p-2 bg-light cshadow">
+				<img src='assets/images/screenshots/aeon.png' class="w-100">
+			</div>	
+			<div class="swiper-slide border p-2 bg-light cshadow">
+				<img src='assets/images/screenshots/agency.png' class="w-100">
+			</div>			
+		</div>
+		<!-- Add Pagination -->
+		<div class="portfolio-swiper-pagination"></div>
+  </div>
+</div>
+</section>
+<!-- ABOUT COMPANY - 1 -->
+
+<!-- ABOUT COMPANY - 2 --> 
+<section class='w-100 bg-primary text-light bg-sec'>
+	<div class='container'>
+		<div class='row'>			
+			<div class='col-12 col-md-4'>
+				<img class="w-100 border cshadow" src="assets/images/cropped/15674141374509.jpg" alt="">
+			</div>
+			<div class='col-12 col-md-8'>
+				<h2 class="ont-weight-bold text-light">Accelerated marketing. Big results.
+									</h2>
+				<p>
+					Cum fugit nihil blanditiis ab qui consequatur quo nobis magnam sed et esse nesciunt a dicta ex saepe sint saepe numquam labore culpa commodi possimus				</p>
+				<p>
+					<button class='btn btn-primary'>More Info.</button>
+				</p>
+			</div>
+		</div>		
+	</div>
+</section>
+<!-- PRICING TABLE -->
+<section class='bg-sec' id="pricing">
+	<div class="container">
+		<div class='text-center'>
+			<h2>PRICING TABLE</h2>
+			<span class='d-block text-muted fs-18'>Simple Pricing</span>
+		</div>
+		<div class="card-deck mb-3 text-center pt-5">
+            <div class="card mb-4 bshadow p-4"> 
+				<h4 class="my-0 font-weight-bold text-muted">FREE</h4>    
+				<div class="card-body">
+					            <h1 class="card-title pricing-card-title">
+                <span class="d-block-inline align-top fs-18 text-muted font-weight-bold">$</span>0 <small class="text-muted fs-16"> per month</small>
+            </h1>
+         
+					<ul class="list-unstyled mt-3 mb-4">
+					<li>5 users included</li>
+					<li>1 GB of storage</li>
+					<li>Email support</li>
+					<li>Help center access</li>
+					</ul>
+					<button type="button" class="btn btn-lg  btn-outline-primary">Sign up</button>
+				</div>
+			</div>
+			<div class="card mb-4 bshadow p-4"> 
+				<h4 class="my-0 font-weight-bold text-muted">Basic</h4>    
+				<div class="card-body">
+					            <h1 class="card-title pricing-card-title">
+                <span class="d-block-inline align-top fs-18 text-muted font-weight-bold">$</span>15 <small class="text-muted fs-16"> per month</small>
+            </h1>
+         
+					<ul class="list-unstyled mt-3 mb-4">
+					<li>10 users included</li>
+					<li>2 GB of storage</li>
+					<li>Email support</li>
+					<li>Help center access</li>
+					</ul>
+					<button type="button" class="btn btn-lg  btn-primary">Sign up</button>
+				</div>
+			</div>
+			<div class="card mb-4 bshadow p-4">
+				<h4 class="my-0 font-weight-bold text-muted">Pro</h4>
+				<div class="card-body">
+					            <h1 class="card-title pricing-card-title">
+                <span class="d-block-inline align-top fs-18 text-muted font-weight-bold">$</span>25 <small class="text-muted fs-16"> per month</small>
+            </h1>
+         
+					<ul class="list-unstyled mt-3 mb-4">
+					<li>20 users included</li>
+					<li>10 GB of storage</li>
+					<li>Priority email support</li>
+					<li>Help center access</li>
+					</ul>
+					<button type="button" class="btn btn-lg btn-primary">Get started</button>
+				</div>
+			</div>
+			<div class="card mb-4 bshadow p-4">
+				<h4 class="my-0 font-weight-bold text-muted">Enterprise</h4>
+                <div class="card-body">
+                                <h1 class="card-title pricing-card-title">
+                <span class="d-block-inline align-top fs-18 text-muted font-weight-bold">$</span>65 <small class="text-muted fs-16"> per month</small>
+            </h1>
+         
+                    <ul class="list-unstyled mt-3 mb-4">
+                    <li>30 users included</li>
+                    <li>15 GB of storage</li>
+                    <li>Phone and email support</li>
+                    <li>Help center access</li>
+                    </ul>
+                    <button type="button" class="btn btn-lg btn-primary">Contact us</button>
+                </div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- COUNTERS -->
+
+<!-- TESTIMONIALS -->
+<section class='pb-5' id="testimonials">
+	<div class='w-100 text-center'>
+		<h2>CLIENT TESTIMONIALS</h2>
+	</div>
+	<!-- Swiper -->
+	<div class="swiper-container">
+		<div class="swiper-wrapper pt-5 pb-5">
+							<div class="swiper-slide">
+					<div class='testimonial-card'>	
+						<span class='d-block t-img-block rounded-circle cshadow'>
+							<img src="assets/images/pixabay/model-1.png" alt="" class="w-100">
+						</span>
+						<span class="d-block t-text pt-4">
+							<p>
+								<sup class='d-block-inline pr-2 text-muted'>
+									<i class="fas fa-quote-left"></i>  
+								</sup> Non similique repellendus dolorum et quasi occaecati quod esse sed voluptas inventore repellat maxime voluptatibus est reiciendis id							</p>
+						</span>	  
+						<span class="d-block text-muted font-weight-bold">
+							Otis Heathcote						</span>
+						<span class='d-block text-muted'>
+							DRIVER-SALES WORKER						</span>
+					</div>
+				</div>	
+							<div class="swiper-slide">
+					<div class='testimonial-card'>	
+						<span class='d-block t-img-block rounded-circle cshadow'>
+							<img src="assets/images/pixabay/model-1.png" alt="" class="w-100">
+						</span>
+						<span class="d-block t-text pt-4">
+							<p>
+								<sup class='d-block-inline pr-2 text-muted'>
+									<i class="fas fa-quote-left"></i>  
+								</sup> Officiis molestias minus sapiente vero sint et nihil dolores labore repudiandae est suscipit at beatae voluptatum							</p>
+						</span>	  
+						<span class="d-block text-muted font-weight-bold">
+							Lavina Kuphal						</span>
+						<span class='d-block text-muted'>
+							CAPTION WRITER						</span>
+					</div>
+				</div>	
+							<div class="swiper-slide">
+					<div class='testimonial-card'>	
+						<span class='d-block t-img-block rounded-circle cshadow'>
+							<img src="assets/images/pixabay/model-1.png" alt="" class="w-100">
+						</span>
+						<span class="d-block t-text pt-4">
+							<p>
+								<sup class='d-block-inline pr-2 text-muted'>
+									<i class="fas fa-quote-left"></i>  
+								</sup> Quasi eos iusto rerum nihil laborum ab labore aliquid sit quod dolore omnis quidem vitae alias							</p>
+						</span>	  
+						<span class="d-block text-muted font-weight-bold">
+							Rocio Kautzer						</span>
+						<span class='d-block text-muted'>
+							SPRAYING MACHINE OPERATOR						</span>
+					</div>
+				</div>	
+							<div class="swiper-slide">
+					<div class='testimonial-card'>	
+						<span class='d-block t-img-block rounded-circle cshadow'>
+							<img src="assets/images/pixabay/model-1.png" alt="" class="w-100">
+						</span>
+						<span class="d-block t-text pt-4">
+							<p>
+								<sup class='d-block-inline pr-2 text-muted'>
+									<i class="fas fa-quote-left"></i>  
+								</sup> Dolorem laudantium perspiciatis quas qui maiores occaecati dicta consequatur voluptates optio accusantium sint vel asperiores veritatis officia exercitationem incidunt porro							</p>
+						</span>	  
+						<span class="d-block text-muted font-weight-bold">
+							Miss Rafaela Halvorson IV						</span>
+						<span class='d-block text-muted'>
+							PREPRESS TECHNICIAN						</span>
+					</div>
+				</div>	
+							<div class="swiper-slide">
+					<div class='testimonial-card'>	
+						<span class='d-block t-img-block rounded-circle cshadow'>
+							<img src="assets/images/pixabay/model-1.png" alt="" class="w-100">
+						</span>
+						<span class="d-block t-text pt-4">
+							<p>
+								<sup class='d-block-inline pr-2 text-muted'>
+									<i class="fas fa-quote-left"></i>  
+								</sup> Eos velit odio aut modi quia blanditiis odio id cupiditate pariatur amet est eos nisi expedita sit est ea ut							</p>
+						</span>	  
+						<span class="d-block text-muted font-weight-bold">
+							Dr. Deven Lynch						</span>
+						<span class='d-block text-muted'>
+							MUNICIPAL FIRE FIGHTING SUPERVISOR						</span>
+					</div>
+				</div>	
+							<div class="swiper-slide">
+					<div class='testimonial-card'>	
+						<span class='d-block t-img-block rounded-circle cshadow'>
+							<img src="assets/images/pixabay/model-1.png" alt="" class="w-100">
+						</span>
+						<span class="d-block t-text pt-4">
+							<p>
+								<sup class='d-block-inline pr-2 text-muted'>
+									<i class="fas fa-quote-left"></i>  
+								</sup> Sed nulla soluta et quisquam eum et praesentium non rem ducimus aut sequi quaerat provident mollitia aperiam sed							</p>
+						</span>	  
+						<span class="d-block text-muted font-weight-bold">
+							Carson Mayer						</span>
+						<span class='d-block text-muted'>
+							FIRST-LINE SUPERVISOR-MANAGER OF LANDSCAPING, LAWN SERVICE, AND GROUNDSKEEPING WORKER						</span>
+					</div>
+				</div>	
+				
+		</div>
+		<!-- Add Pagination -->
+		<div class="swiper-pagination pt-5"></div>
+	</div>
+</section>
+
+<!-- CLIENTS -->
+<section class='bg-primary text-light border py-4' id="clients">
+	<div class='container overflow-hidden'>
+		<div class="brands-swiper-container position-relative" >
+			<div class="swiper-wrapper">
+									<div class="swiper-slide">
+						<img src="assets/images/brand-logos/logo10.png" alt="" width="150">
+					</div>
+									<div class="swiper-slide">
+						<img src="assets/images/brand-logos/logo11.png" alt="" width="150">
+					</div>
+									<div class="swiper-slide">
+						<img src="assets/images/brand-logos/logo12.png" alt="" width="150">
+					</div>
+									<div class="swiper-slide">
+						<img src="assets/images/brand-logos/logo13.png" alt="" width="150">
+					</div>
+									<div class="swiper-slide">
+						<img src="assets/images/brand-logos/logo14.png" alt="" width="150">
+					</div>
+									<div class="swiper-slide">
+						<img src="assets/images/brand-logos/logo15.png" alt="" width="150">
+					</div>
+									<div class="swiper-slide">
+						<img src="assets/images/brand-logos/logo16.png" alt="" width="150">
+					</div>
+									<div class="swiper-slide">
+						<img src="assets/images/brand-logos/logo17.png" alt="" width="150">
+					</div>
+									<div class="swiper-slide">
+						<img src="assets/images/brand-logos/logo18.png" alt="" width="150">
+					</div>
+							
+			</div>
+			<!-- Add Arrows -->
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+		</div>
+	</div>
+</section>
+<!-- TEAM -->
+<section class='bg-sec' id="team">
+	<div class='text-center'>
+		<h2>OUR TEAM</h2>
+		<span class='d-block text-muted fs-18'>Our awesome team members</span>
+	</div>
+	<!-- Swiper -->
+	<div class='container overflow-hidden pt-5 text-center'>
+		<div class="team-swiper-container ">
+			<div class="swiper-wrapper">
+
+				
+					<div class="swiper-slide">
+						<div class='team-card bg-light '>	
+							<span class='d-block team-img-block   '>
+								<img src="assets/images/team/model-1.jpg" alt="" class="w-100 ">
+							</span>
+							<span class="d-block text-muted font-weight-bold p-3">
+								Meghan Osinski							</span>
+							<span class='d-block text-muted'>
+								APPRENTICE							</span>
+							<span class="d-block t-text p-4">
+								<p>
+									Quibusdam est rerum repudiandae sequi maxime corporis numquam excepturi et nihil veritatis eius ut culpa tenetur								</p>
+							</span>	  
+							<span class="d-block py-3">
+                                <a href='#' class="a-socicon fs-22 text-muted p-2"><i class="fab fa-facebook-f"></i></a>
+                                <a href='#' class="a-socicon fs-22 text-muted p-2"><i class="fab fa-twitter"></i></a>
+                                <a href='#' class="a-socicon fs-22 text-muted p-2"><i class="fab fa-linkedin-in"></i></a>
+                                <a href='#' class="a-socicon fs-22 text-muted p-2"><i class="fab fa-google-plus-g"></i></a>
+                            </span>
+						</div>
+					</div>						
+										
+				
+					<div class="swiper-slide">
+						<div class='team-card bg-light '>	
+							<span class='d-block team-img-block   '>
+								<img src="assets/images/team/model-2.jpg" alt="" class="w-100 ">
+							</span>
+							<span class="d-block text-muted font-weight-bold p-3">
+								Elvera Wisozk							</span>
+							<span class='d-block text-muted'>
+								SUPERVISOR							</span>
+							<span class="d-block t-text p-4">
+								<p>
+									Molestiae in perspiciatis et repellat nihil esse et officiis consequuntur quis aspernatur dolores ut illo								</p>
+							</span>	  
+							<span class="d-block py-3">
+                                <a href='#' class="a-socicon fs-22 text-muted p-2"><i class="fab fa-facebook-f"></i></a>
+                                <a href='#' class="a-socicon fs-22 text-muted p-2"><i class="fab fa-twitter"></i></a>
+                                <a href='#' class="a-socicon fs-22 text-muted p-2"><i class="fab fa-linkedin-in"></i></a>
+                                <a href='#' class="a-socicon fs-22 text-muted p-2"><i class="fab fa-google-plus-g"></i></a>
+                            </span>
+						</div>
+					</div>						
+										
+				
+					<div class="swiper-slide">
+						<div class='team-card bg-light '>	
+							<span class='d-block team-img-block   '>
+								<img src="assets/images/team/model-3.jpg" alt="" class="w-100">
+							</span>
+							<span class="d-block text-muted font-weight-bold p-3">
+								Rodger Koepp MD							</span>
+							<span class='d-block text-muted'>
+								CFO							</span>
+							<span class="d-block t-text p-4">
+								<p>
+									Iure esse ad dicta dolores voluptas beatae repellendus quia qui soluta molestias laboriosam cum quo asperiores sed aspernatur ipsa								</p>
+							</span>	  
+							<span class="d-block py-3">
+                                <a href='#' class="a-socicon fs-22 text-muted p-2"><i class="fab fa-facebook-f"></i></a>
+                                <a href='#' class="a-socicon fs-22 text-muted p-2"><i class="fab fa-twitter"></i></a>
+                                <a href='#' class="a-socicon fs-22 text-muted p-2"><i class="fab fa-linkedin-in"></i></a>
+                                <a href='#' class="a-socicon fs-22 text-muted p-2"><i class="fab fa-google-plus-g"></i></a>
+                            </span>
+						</div>
+					</div>						
+										
+				
+					<div class="swiper-slide">
+						<div class='team-card bg-light '>	
+							<span class='d-block team-img-block   '>
+								<img src="assets/images/team/model-4.jpg" alt="" class="w-100 ">
+							</span>
+							<span class="d-block text-muted font-weight-bold p-3">
+								Alexandrea Block							</span>
+							<span class='d-block text-muted'>
+								CTO							</span>
+							<span class="d-block t-text p-4">
+								<p>
+									Distinctio ut delectus consequatur consequatur ullam quaerat quo aut vitae optio temporibus tenetur non sit et								</p>
+							</span>	  
+							<span class="d-block py-3">
+                                <a href='#' class="a-socicon fs-22 text-muted p-2"><i class="fab fa-facebook-f"></i></a>
+                                <a href='#' class="a-socicon fs-22 text-muted p-2"><i class="fab fa-twitter"></i></a>
+                                <a href='#' class="a-socicon fs-22 text-muted p-2"><i class="fab fa-linkedin-in"></i></a>
+                                <a href='#' class="a-socicon fs-22 text-muted p-2"><i class="fab fa-google-plus-g"></i></a>
+                            </span>
+						</div>
+					</div>						
+										
+				
+					<div class="swiper-slide">
+						<div class='team-card bg-light '>	
+							<span class='d-block team-img-block   '>
+								<img src="assets/images/team/model-5.jpg" alt="" class="w-100 ">
+							</span>
+							<span class="d-block text-muted font-weight-bold p-3">
+								Eugenia Hudson							</span>
+							<span class='d-block text-muted'>
+								APPRENTICE							</span>
+							<span class="d-block t-text p-4">
+								<p>
+									In quia fuga natus ratione nostrum dolores quia saepe eius et qui possimus doloribus molestiae est								</p>
+							</span>	  
+							<span class="d-block py-3">
+                                <a href='#' class="a-socicon fs-22 text-muted p-2"><i class="fab fa-facebook-f"></i></a>
+                                <a href='#' class="a-socicon fs-22 text-muted p-2"><i class="fab fa-twitter"></i></a>
+                                <a href='#' class="a-socicon fs-22 text-muted p-2"><i class="fab fa-linkedin-in"></i></a>
+                                <a href='#' class="a-socicon fs-22 text-muted p-2"><i class="fab fa-google-plus-g"></i></a>
+                            </span>
+						</div>
+					</div>						
+										
+					
+
+			</div>
+			<!-- Add Pagination -->
+			<div class="team-swiper-pagination pt-5"></div>
+		</div>
+	</div>
+</section>
+<!-- CONTACT FORM -->
+<section class="bg-light border bg-sec" id="contact">
+
+	<div class='text-center'>
+		<h2>CONTACT FORM</h2>
+		<span class='d-block text-muted fs-18'>Drop us a line. We are open 24/7 !</span>
+	</div>
+
+
+	<div class='container pt-4'>
+		<form action="#" method="post">
+			<div class="custom-form w-50 mx-auto">
+				<div class="form-row">
+					<div class="col-12 col-md-4 p-2">
+						<input type="text" class="form-control" name="your_name" placeholder="Name" required="required">
+					</div>
+					<div class="col-12 col-md-4 p-2">
+						<input type="email" class="form-control" name="your_email" placeholder="Email">
+					</div>
+					<div class="col-12 col-md-4 p-2">
+						<input type="text" class="form-control" name="your_phone" placeholder="Phone">
+					</div>
+				</div>
+				<div class='form-row'>
+					<div class="col p-2">
+						<textarea name="message" id="message"  class="form-control " rows="7" placeholder="Your message..."></textarea>
+					</div>
+				</div>
+				<div class="text-center pt-4">
+					<button class='btn btn-primary btn-md'>Send Message</button>
+				</div>
+			</div>
+		</form>
+	</div>
+
+</section>
+<!-- SOCICON -->
+<section class="bg-sec">
+	<div class='container'>
+		<span class="d-block w-100 socicon-block text-center text-muted">
+			<h2>SHARE</h2>
+		</span>
+		<span class="d-block w-100 socicon-block text-center">
+			<a href='#' class="a-socicon fa-32 text-info p-2"><i class="fab fa-facebook-f"></i></a>
+			<a href='#' class="a-socicon fa-32 text-info p-2"><i class="fab fa-twitter"></i></a>
+			<a href='#' class="a-socicon fa-32 text-info p-2"><i class="fab fa-linkedin-in"></i></a>
+			<a href='#' class="a-socicon fa-32 text-info p-2"><i class="fab fa-google-plus-g"></i></a>
+		</span>
+	</div>
+</section>
+<!-- FOOTER -->
+<!-- FOOTER --> 
+<section class="sm-sec bg-dark">
+	<footer class="container">
+		<div class="row">
+			<div class="col-12 col-md-4">
+				<span class="d-block">
+					<a href='#' class="d-block-inline fa-32 text-muted"><i class="fas fa-feather-alt"></i></a>
+					<span class="d-block-inline pl-2 fa-32 text-muted footer-logo-text">Betis</span>
+				</span>
+				<span class="d-block text-muted">
+					<p>Betis is a top quality company.
+						Qui sit cupiditate sit temporibus occaecati saepe eius occaecati nobis itaque fugit laboriosam cupiditate accusantium					</p>
+				</span>
+			</div>
+			<div class="col-12 col-md-4">
+				<h5 class="text-muted font-weight-normal">ADDRESS </h5>
+				<ul class="list-unstyled">
+					<li class="text-muted py-2">
+						<i class="fa fa-map-marker pr-2" aria-hidden="true"></i> 
+						81652 Roob Island
+Cruickshankborough, CO 79750					</li>
+					<li class="text-muted py-2">
+						<i class="fa fa-phone pr-2" aria-hidden="true"></i> 
+						724-456-9468					</li> 
+					<li class="text-muted py-2">
+						<i class="fa fa-envelope pr-2" aria-hidden="true"></i>
+						info@webdesignvista.com
+					</li>
+				</ul>
+			</div>
+			<div class="col-12 col-md-4">
+				<h5 class="text-muted font-weight-normal">SUBSCRIBE </h5>
+				<ul class="list-unstyled">					
+					<li class="text-muted py-2">
+						Enter your email to subscribe to our newsletter
+					</li> 
+					<li class="text-muted py-2">
+						<input type="text" class="form-control bg-dark border-secondary" name="subscribe-email">
+					</li>
+					<li class="text-muted py-2">
+						<button class="btn btn-primary text-light btn-sm">Submit</button>
+					</li>
+				</ul>
+			</div>
+		</div>	
+		<div class="copyright text-center text-muted">
+			<hr>
+			&copy; copyright - <a href="https://webdesignvista.com/" class="text-muted">Web Design Vista</a>,
+			All Rights Reserved
+		</div>	
+	</footer>
+	
+</section></body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+<!-- Home page footer dynamic assets -->
+
+
+<!-- Swiper JS -->
+<script src="assets/plugins/swiper/js/swiper.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+
+    var swiper1 = new Swiper('.swiper-container', {
+        speed: 1500,
+        spaceBetween: 30,
+        setWrapperSize: true,
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
+      
+    });
+
+    var swiper2 = new Swiper('.portfolio-swiper-container', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+            el: '.portfolio-swiper-pagination',
+            clickable: true,
+        },
+        breakpointsInverse: true,
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+            slidesPerView: 1,
+            spaceBetween: 20
+            },
+            // when window width is >= 480px
+            480: {
+            slidesPerView: 2,
+            spaceBetween: 30
+            },
+            // when window width is >= 640px
+            640: {
+            slidesPerView: 3,
+            spaceBetween: 40
+            }
+        }
+    });
+
+    var swiper3 = new Swiper('.team-swiper-container', {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        pagination: {
+            el: '.team-swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            // when window width is <= 320px
+            320: {
+            slidesPerView: 1,
+            spaceBetween: 20
+            },
+            // when window width is <= 480px
+            480: {
+            slidesPerView: 2,
+            spaceBetween: 30
+            },
+            // when window width is <= 640px
+            640: {
+            slidesPerView: 3,
+            spaceBetween: 40
+            }
+        }
+    });
+
+    var swiper4 = new Swiper('.brands-swiper-container', {
+        autoHeight: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        slidesPerView: 4,
+        spaceBetween: 30,
+        breakpoints: {
+            // when window width is <= 320px
+            320: {
+            slidesPerView: 1,
+            spaceBetween: 20
+            },
+            // when window width is <= 480px
+            480: {
+            slidesPerView: 2,
+            spaceBetween: 30
+            },
+            // when window width is <= 640px
+            640: {
+            slidesPerView: 3,
+            spaceBetween: 40
+            }
+        }
+    });
+
+
+    var swiper5 = new Swiper('.hero-swiper-container', {
+      pagination: {
+        el: '.hero-swiper-pagination',
+        clickable: true
+      },
+    });
+
+
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
+<script src="assets/plugins/counterup/jquery.counterup.js"></script>
+<script>
+
+    jQuery(document).ready(function($) {
+
+        /* Counter */
+        $('.counter').counterUp({
+            delay: 10,
+            time: 1000
+        });
+
+        /* Nabar shrink */
+        $(document).on("scroll", function(){
+
+            if ($(document).scrollTop() > 100){
+                $(".primary-nav").addClass("shrink");
+            } else {
+                $(".primary-nav").removeClass("shrink");
+            }
+
+        });
+
+        /* Why Choose Us Accordion */
+
+        // Add minus icon for collapse element which is open by default
+        $(".collapse.show").each(function(){
+        	$(this).prev(".card-header").find(".fa").addClass("fa-minus").removeClass("fa-plus");
+        });
+        
+        // Toggle plus minus icon on show hide of collapse element
+        $(".collapse").on('show.bs.collapse', function(){
+        	$(this).prev(".card-header").find(".fa").removeClass("fa-plus").addClass("fa-minus");
+        }).on('hide.bs.collapse', function(){
+        	$(this).prev(".card-header").find(".fa").removeClass("fa-minus").addClass("fa-plus");
+        });
+
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+</script>
+
+
+</html>
